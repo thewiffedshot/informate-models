@@ -5,7 +5,8 @@ are what Informate (informate-game@simon-is.live) downloads the first time a lan
 played. They are **unmodified copies** of packages published on [nuget.org](https://www.nuget.org)
 and [PyPI](https://pypi.org) (and one file of jieba's repository), mirrored under their original names so the game does not depend
 on those sites staying reachable -- except the `words.*.zip` word lists, which Informate builds
-from wordfreq's data and publishes only here. The game checks every file against the hash its original
+from wordfreq's data, and the `articles.*.zip` article packs, which Informate builds from
+Wikipedia's articles; both are published only here. The game checks every file against the hash its original
 publisher gives for it and refuses any that does not match, and it falls back to the original
 site if a file here cannot be fetched.
 
@@ -21,6 +22,7 @@ Nothing here is Informate's own work. Each file is under its own licence:
 | `system.configuration.configurationmanager.*.nupkg` | [.NET](https://github.com/dotnet/runtime), Copyright (c) .NET Foundation and Contributors | MIT |
 | `libnmecab.*.nupkg` | [NMeCab](https://github.com/komutan/NMeCab), Copyright (c) Tsuyoshi Komuta; a port of MeCab, Copyright (c) Taku Kudo and Nippon Telegraph and Telephone Corporation | LGPL 2.1: `licenses/LibNMeCab-LGPL-2.1.txt`. Its source is in the same release, `NMeCab-0.10.2-source.zip` |
 | `words.*.wordfreq-*.zip` | word lists from [wordfreq](https://github.com/rspeer/wordfreq), by Robyn Speer, built by Informate's `tools/word-lists` | CC BY-SA 4.0, with credits to its sources: `licenses/wordfreq-DATA-LICENSE.txt`, also inside each zip |
+| `articles.*.zip` | plain-text extracts of articles from [Wikipedia](https://www.wikipedia.org), by Wikipedia's contributors, built by Informate's prototype (`--packs`); each article lists its address and the revision it was read from, and its authors are in that article's history | CC BY-SA 4.0, adapted (references and markup removed): `licenses/CC-BY-SA-4.0.txt`, and `LICENSE.txt` inside each zip |
 | `python_mecab_ko_dic-*.whl` | [mecab-ko-dic](https://bitbucket.org/eunjeon/mecab-ko-dic), packaged by [python-mecab-ko-dic](https://pypi.org/project/python-mecab-ko-dic/) | Apache 2.0: `licenses/mecab-ko-dic-LICENSE.txt` |
 
 Each package also carries its own licence and notice files, where its publisher included them.
